@@ -38,9 +38,31 @@ div input{
 div button{
     background-color: chocolate;
 }
+.fruits{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
 section{
-    margin: 2em auto;
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
+
 }
+
+@media (min-width: 320px){
+section{
+    flex-direction: column;
+}   
+}
+@media (min-width: 1024px){
+    section{
+        flex-direction: row;
+    }    
+}
+
+
+

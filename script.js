@@ -13,6 +13,7 @@ let remaining = 0;
 
 
 function user_budget() {
+
     budget = document.querySelector("#budget").value;
 }
 function total_amount() {
@@ -28,7 +29,8 @@ function user_remaining() {
 // adding apple price
 function addprice1() {
     user_budget();
-    if (total != budget && total<=budget) {
+    user_remaining();
+    if ( total< budget && remaining > 10) {
         appleprice += 10
         total_amount();
         appleQuantity++
@@ -41,19 +43,25 @@ function addprice1() {
 }
 // subtracting apple price
 function subprice1() {
-    appleprice -= 10
-    appleQuantity--
-    document.querySelector("#apple-price").value = appleQuantity;
+    if (appleQuantity != 0) {
+        appleprice -= 10
+        appleQuantity--
+        document.querySelector("#apple-price").value = appleQuantity;
+        user_budget();
+        total_amount();
+        user_remaining();
+    }
+    else {
+        alert("You have not selected any item");
+    }
 
-    user_budget();
-    total_amount();
-    user_remaining();
 }
 // mango
 // adding mango price
 function addprice2() {
     user_budget();
-    if (total != budget  && total<=budget) {
+    user_remaining();
+    if (total<budget && remaining>5) {
         mangoprice += 5
         total_amount();
         mangoQuantity++
@@ -68,19 +76,25 @@ function addprice2() {
 }
 // subtracting mango price
 function subprice2() {
-    mangoprice -= 5
-    mangoQuantity--
-    document.querySelector("#mango-price").value = mangoQuantity;
+    if (mangoQuantity != 0) {
+        mangoprice -= 5
+        mangoQuantity--
+        document.querySelector("#mango-price").value = mangoQuantity;
 
-    user_budget();
-    total_amount();
-    user_remaining();
+        user_budget();
+        total_amount();
+        user_remaining();
+    }
+    else {
+        alert("You have not selected any item");
+    }
 }
 // banana
 // adding banana price
 function addprice3() {
     user_budget();
-    if (total != budget  && total<=budget) {
+    user_remaining();
+    if (total < budget && remaining > 15) {
         bananaprice += 15
         total_amount();
         bananaQuantity++
@@ -93,16 +107,20 @@ function addprice3() {
 }
 // subtracting banana price
 function subprice3() {
-    bananaprice -= 15
-    bananaQuantity--
-    document.querySelector("#banana-price").value = bananaQuantity;
+    if (bananaQuantity != 0) {
+        bananaprice -= 15
+        bananaQuantity--
+        document.querySelector("#banana-price").value = bananaQuantity;
 
-    user_budget();
-    total_amount();
-    user_remaining();
+        user_budget();
+        total_amount();
+        user_remaining();
 
+    }
+    else {
+        alert("You have not selected any item");
+    }
 }
-
 
 
 
