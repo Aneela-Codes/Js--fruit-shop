@@ -30,7 +30,7 @@ function user_remaining() {
 function addprice1() {
     user_budget();
     user_remaining();
-    if ( total< budget && remaining > 10) {
+    if ( total< budget && remaining >= 10) {
         appleprice += 10
         total_amount();
         appleQuantity++
@@ -61,7 +61,7 @@ function subprice1() {
 function addprice2() {
     user_budget();
     user_remaining();
-    if (total<budget && remaining>5) {
+    if (total<budget && remaining>=5) {
         mangoprice += 5
         total_amount();
         mangoQuantity++
@@ -94,7 +94,7 @@ function subprice2() {
 function addprice3() {
     user_budget();
     user_remaining();
-    if (total < budget && remaining > 15) {
+    if (total < budget && remaining >= 15) {
         bananaprice += 15
         total_amount();
         bananaQuantity++
