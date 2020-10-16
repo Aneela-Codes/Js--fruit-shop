@@ -1,3 +1,8 @@
+*{
+  padding:0;
+  margin:0;
+    box-sizing:border-box;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -6,6 +11,7 @@ h1{
     text-align: center;
     background-color: darkseagreen;
     padding: 0.5em;
+    box-shadow: 2px 3px 5px #333;
 }
 .budget{
     text-align: center;
